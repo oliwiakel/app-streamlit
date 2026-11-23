@@ -22,8 +22,8 @@ st.set_page_config(layout="wide")
 @st.cache_data(show_spinner=False)
 def load_my_data():
 
-    filename_0 = "Baza_Danych_FULL_names.pkl" 
-    file_id0 = '1iT3NGplO2ikke8gopxvHLQD6TeI2zmfR'
+    filename_0 = "Baza_ALD_13500.pkl" 
+    file_id0 = '1boH2h2ZRds4NIu4q70fM33yxE9p7HYid'
 
 
     def download_file(file_id, output_name):
@@ -32,7 +32,6 @@ def load_my_data():
         if os.path.exists(output_name):
             os.remove(output_name)
         try:
-            # 
             gdown.download(url, output_name, quiet=False)
         except Exception as e:
             st.error(f"Błąd pobierania {output_name}: {e}")
